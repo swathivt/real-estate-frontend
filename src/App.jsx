@@ -1,5 +1,6 @@
 import Hero from "./components/Hero";
 import Navbar from "./components/Navbar";
+import Testimonials from "./components/Testimonials";
 import TrustSection from "./components/TrustSection";
 
 function App() {
@@ -8,6 +9,7 @@ function App() {
       <Navbar />
       <Hero />
       <TrustSection />
+      <Testimonials />
     </>
   );
 }
