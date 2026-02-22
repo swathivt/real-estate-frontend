@@ -1,13 +1,26 @@
 import LeadForm from "./components/LeadForm";
-import Navbar from "./components/Navbar";
+import styled from "styled-components";
+
+
+const PageWrapper = styled.div`
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+`;
+
 
 function App() {
+  
+
   return (
-    <>
-      <Navbar />
-      <LeadForm />
-    </>
-  );
+   
+     <PageWrapper>
+  <LeadForm />
+</PageWrapper>
+    
+  )
 }
 
-export default App;
+export default App
