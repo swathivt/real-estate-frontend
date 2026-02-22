@@ -1,5 +1,7 @@
+import Hero from "./components/Hero";
 import LeadForm from "./components/LeadForm";
 import styled from "styled-components";
+
 
 
 const PageWrapper = styled.div`
@@ -18,6 +20,7 @@ function App() {
    
      <PageWrapper>
   <LeadForm />
+  <Hero />
 </PageWrapper>
     
   )
