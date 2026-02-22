@@ -1,17 +1,9 @@
-import Footer from "./components/Footer";
-import Hero from "./components/Hero";
-import Navbar from "./components/Navbar";
-import Testimonials from "./components/Testimonials";
-import TrustSection from "./components/TrustSection";
+import LandingPage from "./pages/LandingPage";
 
 function App() {
   return (
     <>
-      <Navbar />
-      <Hero />
-      <TrustSection />
-      <Testimonials />
-      <Footer />
+      <LandingPage />
     </>
   );
 }

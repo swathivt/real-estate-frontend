@@ -1,6 +1,6 @@
 // src/components/LeadForm.jsx
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import styled from "styled-components";
 
 const Wrapper = styled.div`
@@ -139,6 +139,9 @@ const SuccessMessage = styled.p`
   font-weight: 500;
 `;
 
+
+
+
 export default function LeadForm() {
   const [formData, setFormData] = useState({
     firstName: "",
@@ -154,6 +157,19 @@ export default function LeadForm() {
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState(false);
+
+  useEffect(() => {
+  const storedData = sessionStorage.getItem("prefillData");
+  if (storedData) {
+    const parsed = JSON.parse(storedData);
+    setFormData((prev) => ({
+      ...prev,
+      firstName: parsed.firstName || "",
+      phone: parsed.phone || "",
+    }));
+    sessionStorage.removeItem("prefillData");
+  }
+}, []);
 
   const handleChange = (e) => {
     setFormData({
