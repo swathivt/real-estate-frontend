@@ -1,13 +1,13 @@
-import './App.css'
+import LeadForm from "./components/LeadForm";
+import Navbar from "./components/Navbar";
 
 function App() {
-  
-
   return (
     <>
-      Real-Estate-Lead Project
+      <Navbar />
+      <LeadForm />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
